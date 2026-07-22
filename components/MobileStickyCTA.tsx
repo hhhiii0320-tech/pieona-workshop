@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { formatWon, pricing } from "@/lib/constants";
+import { formatWon, links, pricing } from "@/lib/constants";
 
 export default function MobileStickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -35,7 +35,7 @@ export default function MobileStickyCTA() {
           </p>
         </div>
         <a
-          href="#apply"
+          href={links.applyPackage}
           className="shrink-0 rounded-full bg-brand-600 px-6 py-3.5 text-sm font-bold text-white shadow-lift active:scale-[0.98]"
         >
           패키지 신청
