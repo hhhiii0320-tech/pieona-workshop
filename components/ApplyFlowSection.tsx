@@ -67,12 +67,7 @@ export default function ApplyFlowSection() {
                 </div>
               </dl>
 
-              <a
-                href={links.apply}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary mt-6 w-full"
-              >
+              <a href={links.apply} className="btn-primary mt-6 w-full">
                 {applyFlow.cta}
               </a>
               <p className="mt-3 text-center text-[0.75rem] leading-relaxed text-ink-muted">
@@ -90,8 +85,6 @@ export default function ApplyFlowSection() {
                   </a>
                   <a
                     href={links.kakaoChannel}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="flex-1 rounded-full border border-black/10 px-4 py-2.5 text-center text-[0.8rem] font-semibold text-ink-soft transition-colors hover:border-brand-300 hover:text-brand-600"
                   >
                     카카오톡 문의

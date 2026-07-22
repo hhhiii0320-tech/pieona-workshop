@@ -53,12 +53,7 @@ export default function ParticipantsSection() {
             아직 신청이 망설여진다면, 고민을 남겨주세요. 오픈 소식과 커리큘럼을
             먼저 안내해드립니다.
           </p>
-          <a
-            href={links.waitlist}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary w-full shrink-0 sm:w-auto"
-          >
+          <a href={links.waitlist} className="btn-secondary w-full shrink-0 sm:w-auto">
             {participantsSection.cta}
           </a>
         </div>
