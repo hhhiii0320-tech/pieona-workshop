@@ -21,7 +21,7 @@ export const links = {
   applyClass2: "https://www.latpeed.com/products/--3BW",
   waitlist: "https://www.latpeed.com/products/--3BW",
   inquiry: "mailto:hi@pieona.com",
-  kakaoChannel: "https://pf.kakao.com/REPLACE_ME",
+  kakaoChannel: "https://https://pf.kakao.com/_XUZRxj",
   // 하단 푸터에 노출되는 공식 채널 링크
   website: "https://pieona.com/",
   instagram: "https://www.instagram.com/arts_pieona/",
