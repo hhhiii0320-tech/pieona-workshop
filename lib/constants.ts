@@ -475,8 +475,8 @@ export const participantsSection = {
 export const workshopStatus = {
   capacity: 20,
   minimumOpen: 8,
-  currentApplicants: 3,
-  packageApplicants: 3,
+  currentApplicants: 5,
+  packageApplicants: 5,
   // 확정 후 "2026-08-15" 형태로 입력
   earlyBirdDeadline: "2026-08-02",
 };
