@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
+import PracticeSection from "@/components/PracticeSection";
 import PainPointSection from "@/components/PainPointSection";
 import SolutionSection from "@/components/SolutionSection";
 import ClassOverviewSection from "@/components/ClassOverviewSection";
@@ -23,9 +24,11 @@ export default function Page() {
     <>
       <SiteHeader />
       <main className="pb-20 sm:pb-0">
-        {/* 1. Hero */}
+        {/* 1. Hero — 모바일 390px 최적화 */}
         <HeroSection />
-        {/* 2. 문제 인식 — 서로 다른 현재 위치 */}
+        {/* 2. 이번 워크숍에서 직접 연습합니다 */}
+        <PracticeSection />
+        {/* 3. 문제 인식 — 서로 다른 현재 위치 */}
         <PainPointSection />
         {/* 3. 워크숍의 차별점 — 선택지·과정 */}
         <SolutionSection />
