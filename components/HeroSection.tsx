@@ -1,10 +1,10 @@
-import { brand, formatWon, hero, pricing } from "@/lib/constants";
+import { formatWon, hero, links, pricing } from "@/lib/constants";
 
 export default function HeroSection() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-cream to-cream pt-28 sm:pt-32"
+      className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-cream to-cream pt-16 sm:pt-28"
     >
       {/* 배경 장식 — 악보/음표 대신 부드러운 톤의 면 */}
       <div
@@ -16,55 +16,48 @@ export default function HeroSection() {
         className="pointer-events-none absolute -left-32 top-40 h-80 w-80 rounded-full bg-clay-100/70 blur-3xl"
       />
 
-      <div className="container-page relative px-5 pb-16 sm:px-8 sm:pb-24">
-        <div className="max-w-3xl animate-fadeUp">
-          <p className="eyebrow">{hero.eyebrow}</p>
+      <div className="container-page relative px-5 pb-8 sm:px-8 sm:pb-16">
+        <div className="animate-fadeUp">
+          {/* 라벨 — 대상 명확화 */}
+          <p className="eyebrow text-xs sm:text-sm">{hero.eyebrow}</p>
 
-          <h1 className="mt-5 whitespace-pre-line text-[1.9rem] font-bold leading-[1.35] tracking-tight text-ink sm:text-4xl sm:leading-[1.3] lg:text-[3.1rem] lg:leading-[1.25]">
+          {/* 메인 제목 */}
+          <h1 className="mt-3 text-[1.6rem] font-bold leading-tight tracking-tight text-ink sm:mt-4 sm:text-3xl sm:leading-snug lg:text-4xl lg:leading-snug">
             {hero.headline}
           </h1>
 
-          <p className="mt-6 max-w-2xl text-[0.98rem] leading-relaxed text-ink-soft sm:text-lg sm:leading-relaxed">
-            {hero.subcopy}
+          {/* 핵심 질문 */}
+          <p className="mt-3 text-[0.92rem] font-medium leading-relaxed text-ink sm:mt-4 sm:text-base">
+            {hero.coreQuestion}
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a href="#apply" className="btn-primary w-full sm:w-auto">
-              {hero.primaryCta}
-            </a>
-            <a href="#curriculum" className="btn-secondary w-full sm:w-auto">
-              {hero.secondaryCta}
-            </a>
+          {/* 일정·장소·정원 */}
+          <div className="mt-4 space-y-1 text-xs sm:text-sm">
+            <p className="text-ink-soft">{hero.workshopInfo}</p>
+            <p className="text-ink-soft">{hero.workshopDetail}</p>
           </div>
 
-          <p className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-muted">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-clay-100 px-3 py-1 text-xs font-semibold text-clay-500">
-              얼리버드
-            </span>
-            {hero.note}
+          {/* 가격·마감 */}
+          <div className="mt-4 rounded-lg bg-clay-100/60 px-3 py-2.5 sm:px-4 sm:py-3">
+            <p className="text-xs font-medium text-clay-600 sm:text-sm">
+              {hero.earlyBirdPrice}
+            </p>
+            <p className="mt-1 text-xs text-clay-500">{hero.earlyBirdDeadline}</p>
+          </div>
+
+          {/* 주요 CTA */}
+          <a
+            href={links.applyPackage}
+            className="btn-primary mt-4 w-full sm:mt-5"
+          >
+            {hero.primaryCta}
+          </a>
+
+          {/* CTA 보조 문구 */}
+          <p className="mt-2 text-center text-xs text-ink-muted">
+            {hero.primaryCtaNote}
           </p>
         </div>
-
-        {/* 핵심 정보 스트립 */}
-        <dl className="mt-12 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-black/[0.06] bg-black/[0.06] shadow-card sm:mt-16">
-          {hero.facts.map((fact) => (
-            <div key={fact.label} className="bg-white px-4 py-5 text-center sm:px-6 sm:py-6">
-              <dt className="text-xs font-medium text-ink-muted sm:text-sm">
-                {fact.label}
-              </dt>
-              <dd className="mt-1.5 text-base font-bold text-ink sm:text-xl">
-                {fact.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-
-        <p className="mt-4 text-center text-xs text-ink-muted sm:text-sm">
-          {brand.workshopTitle} · {brand.subtitle} · 얼리버드 패키지{" "}
-          <strong className="font-semibold text-brand-600">
-            {formatWon(pricing.package.earlyBird)}
-          </strong>
-        </p>
       </div>
     </section>
   );
