@@ -9,11 +9,12 @@
  */
 
 /* ------------------------------------------------------------------
- * 0. 워크숍 일정 및 얼리버드 마감
+ * 0. 워크숍 일정 및 신청 마감
+ * 얼리버드 기간은 종료되었습니다. 현재는 정가 기간 할인가가 적용됩니다.
  * ------------------------------------------------------------------ */
 export const WORKSHOP_DATE = "2026. 8. 15. 토요일";
-export const EARLY_BIRD_CUTOFF = "2026-08-03T00:00:00+09:00"; // 8/2 23:59 마감
-export const EARLY_BIRD_DISPLAY = "8월 2일 23:59";
+export const SALE_CUTOFF = "2026-08-11T00:00:00+09:00"; // 8/10 23:59 마감
+export const SALE_DEADLINE_DISPLAY = "8월 10일 23:59";
 
 /* ------------------------------------------------------------------
  * 1. 신청 · 결제 링크
@@ -77,9 +78,9 @@ export const hero = {
     "참여자의 감정과 표현을 코드·리듬·멜로디로 반영하는 방법부터, 이야기를 가사와 노래의 구조로 발전시키는 과정까지 직접 만들고 연습합니다.",
   workshopInfo: `${WORKSHOP_DATE} · 11:00~16:30`,
   workshopDetail: "강남역 인근 · 최대 20명",
-  earlyBirdPrice: "얼리버드 패키지 135,000원",
-  earlyBirdDeadline: `8월 2일 23:59 마감`,
-  primaryCta: "얼리버드 패키지로 신청하기",
+  earlyBirdPrice: "패키지 16% 할인가 151,200원",
+  earlyBirdDeadline: `${SALE_DEADLINE_DISPLAY} 마감`,
+  primaryCta: "할인가로 패키지 신청하기",
   primaryCtaNote: "결제 완료 시 신청이 확정됩니다.",
   facts: [
     { label: "구성", value: "1교시 + 2교시" },
@@ -97,7 +98,7 @@ export const painPoint = {
     "치료 경력이나 연차와 관계없이 노래 만들기에서 어려움을 느끼는 부분은 서로 다릅니다. 처음 시도하는 사람도, 이미 활용하고 있는 사람도 각자의 자리에서 더 넓히고 싶은 방법이 있을 수 있습니다.",
   items: [
     "치료적 노래 만들기를 해보고 싶지만 어디서부터 시작해야 할지 막막하다",
-    "개사, 재창조연주와 같이 익숙한 방식 외에 직접 노래를 만드는 방법을 더 알고 싶다",
+    "개사나 익숙한 방식 외에 직접 노래를 만드는 방법을 더 알고 싶다",
     "감정이나 분위기에 어울리는 코드와 멜로디를 만드는 것이 어렵다",
     "노래를 만들면 비슷한 코드 진행과 멜로디가 반복된다",
     "참여자의 말과 이야기를 자연스럽게 가사와 노래로 연결하고 싶다",
@@ -173,7 +174,7 @@ export const classes = [
     tagline: "순간 반응형",
     duration: "120분",
     time: "11:00 – 13:00",
-    instructor: "이신원",
+    instructor: "전문가",
     summary:
       "세션 안에서 나온 말, 정서, 무드를 코드와 멜로디의 재료로 바라보는 연습을 합니다. 다이아토닉 코드 진행, 멜로디 윤곽, 리듬적 요소를 활용해 참여자의 표현을 짧은 음악으로 연결하는 구체적인 방법을 다룹니다.",
     points: [
@@ -226,7 +227,7 @@ export const classes = [
     tagline: "회기 준비형",
     duration: "180분",
     time: "13:30 – 16:30",
-    instructor: "이지혜",
+    instructor: "전문가",
     summary:
       "회기 안에서 나온 이야기를 노래의 구조로 구체화하는 방법을 배웁니다. 브레인스토밍한 문장을 그대로 늘어놓는 것이 아니라, 핵심문장과 A-B 구조, 8마디·16마디 흐름 등을 활용해 실제 노래로 작동하는 가사를 구성하고 멜로디와 코드까지 연결합니다.",
     points: [
@@ -331,7 +332,8 @@ export const pricing = {
     key: "class1" as const,
     title: "1교시",
     subtitle: "감정과 무드를 음악적으로 반영하는 법",
-    earlyBird: 70000,
+    earlyBird: 72000,
+    discountRate: 10,
     regular: 80000,
     duration: "120분 · 11:00–13:00",
     features: [
@@ -346,7 +348,8 @@ export const pricing = {
     key: "class2" as const,
     title: "2교시",
     subtitle: "이야기를 치료적 노래 구조로 만드는 법",
-    earlyBird: 85000,
+    earlyBird: 90000,
+    discountRate: 10,
     regular: 100000,
     duration: "180분 · 13:30–16:30",
     features: [
@@ -361,7 +364,8 @@ export const pricing = {
     key: "package" as const,
     title: "1+2교시 패키지",
     subtitle: "두 가지 접근을 함께",
-    earlyBird: 135000,
+    earlyBird: 151200,
+    discountRate: 16,
     regular: 180000,
     duration: "총 300분",
     badge: "가장 추천",
@@ -389,8 +393,7 @@ export const packageProofCopy = {
 };
 
 export const pricingNotes = [
-  "얼리버드 기간(~8/2)에는 추가 할인 혜택이 중복 적용되지 않습니다.",
-  "얼리버드 종료 후(8/3~8/12) 정가 기간에는 대상별 10~15% 할인 혜택이 적용됩니다.",
+  `현재 정가 기간 할인가가 적용되어 있으며, ${SALE_DEADLINE_DISPLAY} 마감됩니다.`,
   "할인은 중복 적용되지 않으며, 해당되는 할인 중 가장 높은 할인 1가지만 적용됩니다.",
   "선착순으로 모집 완료시 사전 마감될 수 있습니다. ",
 ];
@@ -563,7 +566,7 @@ export const instructorSection = {
  */
 export const instructors = [
   {
-    name: "이신원",
+    name: "전문가",
     role: "1교시 담당 강사",
     sessionTitle: "감정과 무드를 음악적으로 반영하는 법",
     description:
@@ -585,7 +588,7 @@ export const instructors = [
     ],
   },
   {
-    name: "이지혜",
+    name: "전문가",
     role: "2교시 담당 강사",
     sessionTitle: "참여자의 이야기를 치료적 노래 구조로 만드는 법",
     description:
