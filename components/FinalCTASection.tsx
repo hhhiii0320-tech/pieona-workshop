@@ -28,7 +28,9 @@ export default function FinalCTASection() {
         </div>
 
         <p className="mt-8 inline-flex flex-wrap items-center justify-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm ring-1 ring-white/15">
-          <span className="font-semibold text-clay-300">얼리버드</span>
+          <span className="font-semibold text-clay-300">
+            {pricing.package.discountRate}% 할인
+          </span>
           <span className="text-brand-200 line-through">
             {formatWon(pricing.package.regular)}
           </span>

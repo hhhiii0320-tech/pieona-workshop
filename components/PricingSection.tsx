@@ -18,8 +18,8 @@ export default function PricingSection() {
         <p className="eyebrow">Pricing</p>
         <h2 className="section-title mt-3">수강료 안내</h2>
         <p className="section-lead">
-          첫 오픈 얼리버드 기간입니다. 단독 수강도 가능하지만, 두 강의가 하나의
-          흐름으로 이어지는 패키지 수강을 가장 추천합니다.
+          현재 정가 기간 할인가가 적용됩니다. 단독 수강도 가능하지만, 두 강의가
+          하나의 흐름으로 이어지는 패키지 수강을 가장 추천합니다.
         </p>
 
         {/* 패키지 카드 — 모바일에서 가장 먼저 보이도록 order 조정 */}
@@ -43,8 +43,8 @@ export default function PricingSection() {
                   <span className="line-through">{formatWon(pkg.regular)}</span>
                 </p>
                 <p className="mt-1 flex items-baseline gap-2">
-                  <span className="text-[0.7rem] font-bold text-clay-500">
-                    얼리버드
+                  <span className="rounded-md bg-clay-500 px-1.5 py-0.5 text-[0.7rem] font-bold text-white">
+                    {pkg.discountRate}%
                   </span>
                   <span className="text-3xl font-bold tracking-tight text-ink sm:text-[2.1rem]">
                     {formatWon(pkg.earlyBird)}
@@ -95,8 +95,8 @@ export default function PricingSection() {
                   </span>
                 </p>
                 <p className="mt-1 flex items-baseline gap-2">
-                  <span className="text-[0.7rem] font-bold text-clay-500">
-                    얼리버드
+                  <span className="rounded-md bg-clay-500 px-1.5 py-0.5 text-[0.7rem] font-bold text-white">
+                    {card.discountRate}%
                   </span>
                   <span className="text-2xl font-bold tracking-tight text-ink">
                     {formatWon(card.earlyBird)}

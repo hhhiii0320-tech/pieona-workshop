@@ -22,7 +22,7 @@ export default function ClassOverviewSection() {
                   {cls.tagline}
                 </span>
                 <span className="text-xs font-medium text-ink-muted">
-                  {cls.time} · {cls.duration} · {cls.instructor} 강사
+                  {cls.time} · {cls.duration} · {cls.instructor} 진행
                 </span>
               </div>
 

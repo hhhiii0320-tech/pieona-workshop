@@ -23,7 +23,7 @@ export default function MobileStickyCTA() {
       <div className="flex items-center gap-3 px-4 py-3">
         <div className="min-w-0 flex-1">
           <p className="text-[0.68rem] font-semibold text-clay-500">
-            얼리버드 패키지
+            패키지 {pricing.package.discountRate}% 할인가
           </p>
           <p className="flex items-baseline gap-1.5">
             <span className="text-[1.05rem] font-bold text-ink">

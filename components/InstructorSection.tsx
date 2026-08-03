@@ -100,7 +100,7 @@ export default function InstructorSection() {
 
         <ul className="mt-10 grid gap-5 sm:grid-cols-2">
           {instructors.map((instructor) => (
-            <InstructorCard key={instructor.name} instructor={instructor} />
+            <InstructorCard key={instructor.role} instructor={instructor} />
           ))}
         </ul>
 
